@@ -1,0 +1,8 @@
+{
+  "name": "effect-atom",
+  "description": "Atomic state management for Effect",
+  "version": "0.1.0",
+  "github": "tim-smart/effect-atom",
+  "sourceType": "github",
+  "topicsDir": "topics"
+}
