@@ -17,9 +17,9 @@ grimoire analyze <name> --github owner/repo --mode api
 3. Copy your grimoire into the correct path:
 
 ```bash
-mkdir -p <owner>/<repo>
-cp ~/.grimoire/projects/<name>/grimoire.json <owner>/<repo>/
-cp -r ~/.grimoire/projects/<name>/topics/ <owner>/<repo>/topics/
+mkdir -p packages/<owner>/<repo>
+cp ~/.grimoire/projects/<name>/grimoire.json packages/<owner>/<repo>/
+cp -r ~/.grimoire/projects/<name>/topics/ packages/<owner>/<repo>/topics/
 ```
 
 4. Open a PR
@@ -38,9 +38,9 @@ Use the GitHub owner/repo as the directory path:
 
 | GitHub repo | Registry path |
 |-------------|---------------|
-| `tim-smart/effect-atom` | `tim-smart/effect-atom/` |
-| `effect-ts/effect` (packages/sql) | `effect-ts/effect/sql/` |
-| `colinhacks/zod` | `colinhacks/zod/` |
+| `tim-smart/effect-atom` | `packages/tim-smart/effect-atom/` |
+| `effect-ts/effect` (packages/sql) | `packages/effect-ts/effect/sql/` |
+| `colinhacks/zod` | `packages/colinhacks/zod/` |
 
 ## Topic quality
 

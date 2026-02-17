@@ -15,21 +15,22 @@ grimoire show effect-atom overview
 Grimoires are namespaced by GitHub `owner/repo`. Monorepo sub-packages get nested directories:
 
 ```
-tim-smart/
-  effect-atom/
-    grimoire.json
-    topics/
-      00-overview.md
-      01-architecture.md
-      ...
-effect-ts/
-  effect/
-    sql/
+packages/
+  tim-smart/
+    effect-atom/
       grimoire.json
-      topics/...
-    ai/
-      grimoire.json
-      topics/...
+      topics/
+        00-overview.md
+        01-architecture.md
+        ...
+  effect-ts/
+    effect/
+      sql/
+        grimoire.json
+        topics/...
+      ai/
+        grimoire.json
+        topics/...
 ```
 
 ## grimoire.json
