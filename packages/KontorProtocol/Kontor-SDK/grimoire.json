@@ -1,0 +1,8 @@
+{
+  "name": "@kontor/kontor-sdk",
+  "description": "A codebase navigation project",
+  "version": "0.1.0",
+  "github": "KontorProtocol/Kontor-SDK",
+  "sourceType": "github",
+  "topicsDir": "topics"
+}
