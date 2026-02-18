@@ -1,16 +1,26 @@
-name: Notify web app to rebuild
+name: Deploy web app on registry change
 
 on:
   push:
     branches: [main]
 
 jobs:
-  notify:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          curl -X POST \
-            -H "Accept: application/vnd.github+json" \
-            -H "Authorization: Bearer ${{ secrets.DISPATCH_TOKEN }}" \
-            https://api.github.com/repos/llm-grimoire/web/dispatches \
-            -d '{"event_type":"registry-updated"}'
+      - uses: actions/checkout@v4
+        with:
+          repository: llm-grimoire/web
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci
+      - run: npm run build
+
+      - uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=grimoire
