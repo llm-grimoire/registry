@@ -1,6 +1,6 @@
 {
   "name": "@kontor/kontor-sdk",
-  "description": "TS SDK for Kontor",
+  "description": "TS SDK for Kontor, a BTC metaprotocol",
   "version": "0.1.0",
   "github": "KontorProtocol/Kontor-SDK",
   "sourceType": "github",
