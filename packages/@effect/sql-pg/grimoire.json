@@ -1,7 +1,6 @@
 {
   "name": "@effect/sql-pg",
   "description": "PostgreSQL client for Effect SQL — connection pooling, streaming, LISTEN/NOTIFY, migrations",
-  "version": "0.1.0",
   "github": "effect-ts/effect",
   "path": "packages/sql-pg",
   "sourceType": "github",
